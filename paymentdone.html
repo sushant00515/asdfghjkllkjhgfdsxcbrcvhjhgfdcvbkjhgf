@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt</title>
+    <script src="document.js"></script>
+    <style>
+       
+        h1 {
+            font-size: 100px;
+            font-weight: bold;
+            color: #020202;
+            text-align: center;
+            margin-top: 0%;
+        }
+
+        user-0  {
+            font-size: 50px;
+            font-weight: bold;
+            color: #000000;
+            margin-top: -33px;
+            text-align: center;
+        }
+
+        user-1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #27ae60;
+            margin-top: 130px;
+            margin-bottom: 130px;
+            text-align: center;
+        }
+        .png {
+            margin-top: 40px;
+            vertical-align: middle;
+        }
+       
+        .total {
+            font-size: 50px;
+            font-weight: bold;
+            color: #27ae60;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 30px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="png">
+            <div style="display: grid; place-items: center;">
+        <img src="userrrrr.png" width="100" >
+        <style>
+            /* Example CSS */
+            #user-0 {
+                color: rgb(0, 0, 0);
+
+                font-weight: normal;
+            }
+    
+            #user-1 {
+                color: green;
+                font-size: 50px;
+                font-style: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="un">
+            <div class="png" id="username-display">
+                <!-- Usernames will be displayed here -->
+            </div>
+        </div>
+    
+        <script>
+            window.onload = function() {
+                let usernames = localStorage.getItem("usernames"); // Get usernames from localStorage
+                if (usernames) {
+                    usernames = JSON.parse(usernames); // Parse the JSON string into an array
+                    const displayDiv = document.querySelector("#username-display");
+    
+                    // Display each username with a unique ID
+                    usernames.forEach((username, index) => {
+                        const p = document.createElement("p"); // Create a new <p> element
+                        p.innerText = `${username}`;
+                        p.id = `user-${index}`; // Assign a unique ID based on the index
+                        displayDiv.appendChild(p); // Add the <p> to the display div
+                    });
+                } else {
+                    const p = document.createElement("p");
+                    p.innerText = "No usernames found";
+                    document.querySelector("#username-display").appendChild(p);
+                }
+            };
+        </script>
+       
+        <div class="container">
+            <div class="lst">
+                <div style="display: grid; place-items: center;">
+        <img src="Completed.png" width="320" >
+    </div>
+
+
+    
+
+</body>
+</html>
